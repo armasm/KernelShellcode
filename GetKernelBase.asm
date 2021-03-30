@@ -25,6 +25,8 @@ cmp     byte ptr[rax+rcx], 48h
 jnz     search_mem_next
 cmp     byte ptr[rax+rcx+1], 8Dh
 jnz     search_mem_next
+cmp     byte ptr[rax+rcx+2], 1Dh
+jnz     search_mem_next
 cmp     byte ptr[rax+rcx+6], 0FFh
 jnz     search_mem_next
 mov     r8d,[rax+rcx+3]
